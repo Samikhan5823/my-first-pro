@@ -1,0 +1,67 @@
+
+body{
+  margin: 0;
+}
+header {
+padding: 30px;
+background: rgb(0, 0, 0);
+height: 40px;
+}
+.sidenav {
+  
+  background: black;
+  position: absolute;
+  height: 95vh;
+  padding: 0 30px;
+  left:-100%;
+  transition: all 1s;
+}
+.sidenav.active {
+left: 0;
+width: 150px;
+}
+
+ul {
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+  margin: 10px 0;
+  
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 0px 15px;
+  border-radius: 6px;
+}
+ul li a:hover ,
+ul li a.active {
+  background: rgb(202, 136, 136);
+}
+.logo {
+  width: 60px;
+  color: white;
+}
+header svg {
+  font-size: 30px;
+  color: white;
+}
+/* .main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: black;
+} */
+.Autocomp-comp{
+  margin: 150px auto 0 auto;
+  width: 600px;
+}
+.main-content{
+ margin-top: 100px;
+  display: flex;
+  position: absolute
+}

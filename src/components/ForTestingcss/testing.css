@@ -1,0 +1,137 @@
+body{
+  background-color: rgb(235, 233, 233);
+}
+
+.box1{
+  margin-left: 200px;
+  text-align: center;
+  padding: 10%;
+  width: 50%;
+  background-color: black;
+  color: white;
+ border-right: 5px solid red;
+ border: 5px solid red;
+ border-style: dashed;
+ padding-top: 20px;
+ margin-top: 50px;
+ font-size: medium;
+ font-family: Arial, Helvetica, sans-serif;
+ font-style: italic;
+line-height: 1em;
+letter-spacing: 0em;
+word-wrap: break-word;
+word-spacing: 1em;
+
+}
+.box2{
+  padding: 10%;
+  margin-left: 200px;
+
+  width: 50%;
+  background-color: black;
+  color: white;
+ border: 5px solid red;
+ border-style: dashed;
+ padding-top: 20px;
+ margin-top: 50px;
+ font-size: medium;
+ font-family: Arial, Helvetica, sans-serif;
+ font-style: italic;
+line-height: 1em;
+letter-spacing: 0em;
+word-wrap: break-word;
+word-spacing: 1em;
+
+}
+.category{
+  color: #c0392b;
+  border: 1px solid black;
+  margin: 30px;
+  border-radius: 15px;
+  padding: 10px;
+ 
+  
+}
+.category h2{
+text-align: center;
+
+}
+.category ul{
+  padding: 0;
+  list-style: square;
+  list-style: none;
+  padding-left: 30px;
+  
+  }
+  a{
+    text-decoration: none;
+    color: blue;
+  }
+  a:hover{
+    color: red;
+  }
+  a:active{
+    color: green;
+  }
+  .category li{
+    padding-bottom: 8px;
+    border-bottom: dotted 1px #333;
+    /* list-style-image: url('../../assets/image/mark.png'); */
+  }
+  .my-form{
+    padding: 20px;
+  }
+  .my-form .form-group{
+    padding-bottom: 15px;
+  }
+  .my-form label{
+    display: block;
+  }
+  .my-form input[type='text']{
+    padding: 8px;
+    width: 50%;
+  }
+  .my-form [type='submit'] {
+    background-color: black;
+    color: blanchedalmond;
+    padding: 10px 15px;
+    border-radius: 2px solid;
+    border: blue;
+  }
+.block{
+  float: left;
+  width: 33%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+#main-block{
+float: left;
+width: 70%;
+
+}
+#sidebar{
+  float: right;
+  width: 30%;
+  background-color: red;
+  color: white;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.p-box{
+  width: 800px;
+  height: 500px;
+  border: 1px solid #000;
+  margin-top: 260px;
+  position: relative;
+}
+.p-box h1{
+top: 100px;  
+position: absolute;
+
+
+}
+.p-box h2{
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
+  }
