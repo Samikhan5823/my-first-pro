@@ -144,109 +144,86 @@
 // }
 
 import React, { Component } from 'react'
+import Pic1 from '../../assets/imges/1.jpg'
+import Pic2 from '../../assets/imges/2.jpg'
+import Pic3 from '../../assets/imges/3.jpg'
 
 export default class Tab5 extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: [
-        { id: 1, name: 'abbas', checked: false },
-        { id: 2, name: 'sam', checked: false },
-        { id: 3, name: 'moiz', checked: false },
+      currentImg: 1,
+      imgData: [
+        { id: 1, name: Pic1 },
+        { id: 2, name: Pic2 },
+        { id: 3, name: Pic3 },
       ],
-      allChecked: false,
-
-      userData: [],
     }
   }
-  handleChange = (e) => {
+  addImg = (e) => {
     console.log('e', e)
-    const { name, value } = e.target
-    // this.setState({
-    //   isChecked: !this.state.isChecked,
-    // });
-    if (name === 'allSelect') {
-      let x = this.state.data
-      x = x.map((el) => {
-        console.log('el', el)
-        if (el.checked === false) {
-          console.log('aa', el.checked)
-          return { ...el, checked: !el.checked }
-        }
-        // el.checked = !el.checked;
-      })
+    if (this.state.imgData.length >= this.state.currentImg +1) {
       this.setState({
-        data: x,
-        allChecked: !this.state.allChecked,
+        currentImg: this.state.currentImg + 1,
       })
-    } else {
     }
   }
+  lessImg = (e) => {
+    console.log('e', e)
+
+    if (this.state.imgData[0].id <= this.state.currentImg-1) {
+      this.setState({
+        currentImg: this.state.currentImg - 1,
+      })
+    }
+  }
+
   render() {
     return (
-      // <div className="container">
-      //   <input
-      //     type="checkbox"
-      //     name="allSelect"
-      //     value={this.state.allChecked}
-      //     checked={this.state.allChecked}
-      //     onChange={(e) => this.handleChange(e)}
-      //   />
-      //   <label>SelectAll</label>
-      //   <div>
-      //     {this.state.data.map((item, i) => {
-      //       return (
-      //         <>
-      //           <input
-      //             key={i}
-      //             type="checkbox"
-      //             name={item.name}
-      //             // checked={this.state.isChecked}
-      //             checked={item.checked}
-      //             onChange={(e) => this.handleChange(e)}
-      //           />
+      <>
+        <div className="container">
+          {/* <iframe src={Pic1}></iframe>
+          <div>
+            <img src={this.state.currentImg}></img>
 
-      //           <label>{item.name}</label>
-      //         </>
-      //       )
-      //     })}
-      //   </div>
-      // </div>
-      <div class="container">
-      <div class="row align-items-start">
-        <div class="col">
-          One of three columns
+            <button onClick={(e) => this.addImg(e)}>+</button>
+            <button onClick={this.lessImg}>-</button>
+          </div> */}
+
+          <a
+            className="left"
+            style={{
+              position: 'relative',
+              left: '500px',
+              cursor: 'pointer',
+              top: '100px',
+            }}
+            onClick={this.lessImg}
+          >
+            ❮
+          </a>
+          {this.state.imgData.map((el, i) => {
+            if (el.id === this.state.currentImg) {
+              console.log('img', el.id)
+
+              return <img src={el.name}></img>
+            }
+          })}
+
+          <a
+            className="right"
+            style={{
+              position: 'relative',
+              left: '770px',
+              cursor: 'pointer',
+              top: '100px',
+            }}
+            onClick={this.addImg}
+          >
+            ❯
+          </a>
         </div>
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-      </div>
-      <div class="row align-items-end">
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-      </div>
-    </div>
+      </>
     )
   }
 }

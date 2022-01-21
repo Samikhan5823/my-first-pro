@@ -1,0 +1,70 @@
+.introduction {
+    position: 'absolute';
+    width: '506pxs';
+    height: '105px';
+    left: '148px';
+    top: '100px';
+}
+
+.intro-details {
+    position: absolute;
+    width: 380px;
+    height: 66px;
+    left: 246px;
+    top: 140px;
+
+}
+
+.download-resume {
+    position: absolute;
+    width: 163px;
+    height: 47px;
+    left: 312px;
+    top: 228px;
+    background: #FF6464;
+    border-radius: 24px;
+
+    /* Primary */
+
+}
+
+img {
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    left: 820px;
+    top: 96px;
+
+
+
+}
+
+.card {
+    position: absolute;
+    width: 1585px;
+    height: 396px;
+    left: 0px;
+    top: 360px;
+    background: #EDF7FA;
+}
+
+.resent-post {
+    position: absolute;
+    width: 129px;
+    height: 60px;
+    left: 148px;
+    top: 15px;
+
+}
+.design-card{
+    
+position: absolute;
+width: 418px;
+height: 295px;
+left: 148px;
+top: 664px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
+border-radius: 4px;
+}
